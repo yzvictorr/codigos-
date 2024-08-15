@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class IdadeEmDias {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+    // Inserir idade em anos
+        System.out.print("Escreva a idade em anos: ");
+        int anos = scanner.nextInt();
+
+    // Inserir  quantidade de meses atuais
+        System.out.print("Escreva quantos meses completos: ");
+        int meses = scanner.nextInt();
+
+     // Inserir quantidade de dias atuais
+        System.out.print("Escreva quantos dias completados: ");
+        int dias = scanner.nextInt();
+
+        // Calcular a idade em dias
+        int diasPorAno = 365;
+        int diasPorMes = 30;
+        int diasTotais = calcularDiasTotais(anos, meses, dias);
+
+        // Exibir o resultado
+        System.out.println("A idade em dias é: " + diasTotais);
+
+        // Fechar o scanner
+        scanner.close();
+    }
+
+    // Função para calcular a idade total em dias
+    public static int calcularDiasTotais(int anos, int meses, int dias) {
+        // Considerar 365 dias por ano e 30 dias por mês
+        return (anos * 365) + (meses * 30) + dias;
+    }
+
+}
