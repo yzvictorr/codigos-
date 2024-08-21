@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Votacao {
+    public static void main(String args[]) {
+        Scanner obj = new Scanner(System.in);
+        int nulo = 0;
+        int branco = 0;
+        int valido = 0;
+        
+        System.out.print("Enter Nulo:");
+        nulo = obj.nextInt();
+        System.out.print("Enter Branco:");
+        branco = obj.nextInt();
+        System.out.print("Enter Valido:");
+        valido = obj.nextInt();
+        
+        float votosTotais = nulo + branco + valido;
+        System.out.print("Votos totais:" + votosTotais);
+        
+        float percentage_nulo;
+        float percentage_branco;
+        float percentage_valido;
+        
+        percentage_nulo = (nulo*100/votosTotais);
+        percentage_branco = (branco*100/votosTotais);
+        percentage_valido = (valido*100/votosTotais);
+        System.out.print("Porcentagem Nulo:" + percentage_nulo);
+        System.out.print("Porcentagem Branco:" + percentage_branco);
+        System.out.print("Porcentagem Valido:" + percentage_valido);
+        
+    }
+}
