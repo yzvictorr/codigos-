@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Carro {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Qual o custo de fábrica do carro: ");
+        double custoFabrica = scanner.nextDouble();
+        
+        final double percentual_distribuidor = 28.0;
+        final double percentual_impostos = 45.0;
+        
+        double valorDistribuidor = custoFabrica * (percentual_distribuidor / 100);
+        double valorImpostos = custoFabrica * (percentual_impostos / 100);
+        
+        double custoFinal = custoFabrica + valorDistribuidor + valorImpostos;
+        
+        System.out.printf("O custo final é: R$ %.2f%n", custoFinal);
+        
+        scanner.close();
+    }
+}
