@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Notas {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Qual foi a nota da 1ª avaliação: ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.print("Qual foi a nota da 2ª avaliação: ");
+        double nota2 = scanner.nextDouble();
+        
+        double media = (nota1 + nota2) / 2;
+        
+        if (media >= 6.0) {
+            System.out.println("O aluno foi aprovado");
+        } else {
+            System.out.println("O aluno foi reprovado");
+        }
+        
+        System.out.printf("A média é: %.2f\n", media);
+    
+    }
+}
