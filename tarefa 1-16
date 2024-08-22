@@ -1,0 +1,15 @@
+public class Trimestral {
+
+    public static void main(String[] args) {
+        double gastoJaneiro = 15000.00;
+        double gastoFevereiro = 23000.00;
+        double gastoMarço = 17000.00;
+        
+        double despesaTotal = gastoJaneiro + gastoFevereiro + gastoMarço;
+        
+        double mediaMensal = despesaTotal / 3;
+        
+        System.out.printf("A despesa no trimestre foi: R$ %.2f\n", despesaTotal);
+        System.out.printf("A media mensal dos gastos foi: R$ %.2f\n", mediaMensal);
+    }
+}
