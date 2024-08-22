@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class MediaLP1 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite a nota da P1: ");
+        double P1 = scanner.nextDouble();
+        
+        System.out.print("Digite a nota da E1: ");
+        double E1 = scanner.nextDouble();
+        
+        System.out.print("Digite a nota da E2: ");
+        double E2 = scanner.nextDouble();
+        
+        System.out.print("Digite a nota da API: ");
+        double API = scanner.nextDouble();
+        
+        System.out.print("Quantos pontos extras? ");
+        double X = scanner.nextDouble();
+        
+        System.out.print("Digite a nota da SUB: ");
+        double SUB = scanner.nextDouble();
+        
+        double mediaP = P1 * 0.6 + ((E1 + E2) / 2) * 0.4;
+        
+        double parteCondicional = 0;
+        if (mediaP > 5.9) {
+            parteCondicional = (mediaP - 5.9) / (mediaP - 5.9) * (API * 0.5);
+        }
+        
+        double mediaLP1 = (mediaP * 0.5) + parteCondicional + X + (SUB * 0.2);
+        
+        System.out.printf("A media da LP1 é: %.2f\n", mediaLP1);
+    
+    }
+}
