@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ReajusteSalario {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+    
+        System.out.print("Qual e o salário mensal: R$ ");
+        double salarioAtual = scanner.nextDouble();
+        
+        
+        System.out.print("Escreva o percentual que deseja ajustar: ");
+        double percentualReajuste = scanner.nextDouble();
+        
+        
+        double novoSalario = calcularNovoSalario(salarioAtual, percentualReajuste);
+        
+        
+        System.out.printf("O novo salário é: R$ %.2f%n", novoSalario);
+        
+        
+        scanner.close();
+    }
+    
+    
+    public static double calcularNovoSalario(double salarioAtual, double percentualReajuste) {
+        double aumento = salarioAtual * (percentualReajuste / 100);
+        return salarioAtual + aumento;
+    }
+}
