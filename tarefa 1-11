@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class IdadeParaVotar {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Qual o ano atual: ");
+        int anoAtual = scanner.nextInt();
+        
+        System.out.print("Qual o ano de nascimento: ");
+        int anoNascimento = scanner.nextInt();
+        
+        int idade = anoAtual - anoNascimento;
+        
+        final int idade_minima_para_votar = 16;
+        
+        if (idade >= idade_minima_para_votar) {
+            System.out.println("Você tem idade para votar");
+        } else {
+            System.out.println("Você não tem idade para votar");
+        }
+        
+    }
+}
