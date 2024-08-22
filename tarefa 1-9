@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Macas {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Qual o número de maçãs compradas?");
+        int quantidade = scanner.nextInt();
+        
+        double precoPorMacas;
+        if (quantidade >= 12) {
+            precoPorMacas = 1.00;
+        } else {
+            precoPorMacas = 1.30;
+        }
+        
+        double custoTotal = quantidade * precoPorMacas;
+        
+        System.out.printf("O custo final da compra é: R$ %.2f\n", custoTotal);
+        
+    }
+}
