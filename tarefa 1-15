@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Salario {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o numero de horas trabalhadas no mes: ");
+        double horasTrabalhadas = scanner.nextDouble();
+        
+        System.out.print("Qual o valor da hora regular em (R$): ");
+        double valorHoraRegular = scanner.nextDouble();
+        
+        final int horas_semanais_regulares = 40;
+        final int semanas_no_mes = 4;
+        final int horas_regulares_no_mes = horas_semanais_regulares *  semanas_no_mes;
+        final double acrescimo_hora_extra = 0.50;
+        
+        double horasExtras = 0;
+        double salarioTotal;
+        
+        if (horasTrabalhadas > horas_regulares_no_mes) { 
+            horasExtras = horasTrabalhadas - horas_regulares_no_mes;
+            salarioTotal = (horas_regulares_no_mes * valorHoraRegular) 
+         + (horasExtras * valorHoraRegular * (1 + acrescimo_hora_extra));
+        } else {
+            salarioTotal = horasTrabalhadas * valorHoraRegular;
+        }
+        
+        System.out.printf("O salario do funcionario é: R$ %.2f\n", salarioTotal);
+        
+    }
+}
